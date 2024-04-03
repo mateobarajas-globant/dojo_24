@@ -9,5 +9,5 @@ def findTheWinner(n, k):
     return player[0]
 
 n = 5
-k = 3
+k = 2
 print(findTheWinner(n, k))
