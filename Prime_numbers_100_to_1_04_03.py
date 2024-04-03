@@ -1,4 +1,4 @@
-def print_primes(start, end):
+def list_primes(start, end):
     if start < end: 
         return
     if start == end:
@@ -7,17 +7,17 @@ def print_primes(start, end):
         return
     if is_prime(start): 
         print(start)
-    print_primes(start - 1, end)
+    list_primes(start - 1, end)
 
-def is_prime(num, divisor=2):
+def is_prime(num, div=2):
     if num < 2:
         return False
     if num == 2:
         return True
-    if num % divisor == 0:
+    if num % div == 0:
         return False
-    if divisor * divisor > num:
+    if div * div > num:
         return True
-    return is_prime(num, divisor + 1)
+    return is_prime(num, div + 1)
 
-print_primes(100, 1)
+list_primes(100, 1)
